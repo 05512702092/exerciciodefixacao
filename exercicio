@@ -1,0 +1,42 @@
+<!-- exercício de fixação -->
+<?php
+class carro{
+public $modelo;
+public $velocidademaxima;
+public $velocidadeatual;
+public function carro($m,$velomax){
+$this->modelo= $m;
+$this->velolocidademax= $velomax;
+echo "{$this->setModelo()} \n";
+$this->ligarcarro();
+$this->acelerar();
+$this->reduzir();
+$this->pararcarro();
+$this->desligarcarro();
+}  
+public function setModelo(){
+return $this->modelo;
+}
+public function ligarcarro(){
+echo "carro ligado \n";
+}
+public function acelerar(){
+$this->velocidadeatual = $this->velolocidademax;
+echo "acelerando... \n";
+echo "velocidade = {$this->velocidadeatual} km/h \n";
+}
+public function reduzir(){
+$this->velocidadeatual = $this->velocidadeatual/2;
+echo "reduzindo velocidade! \n";
+echo "velocidade = {$this->velocidadeatual} km/h \n";
+}
+public function pararcarro(){
+$this->velocidadeatual = 0;
+echo "carro parado \n";
+echo "velocidade = {$this->velocidadeatual} km/h \n";
+}
+public function desligarcarro(){
+echo "carro desligado \n";
+}
+} $carromodelo = new Carro("BMW X",80);
+?>
